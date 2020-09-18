@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+#define M_PI   3.14
+
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	float d; float L;
+
+	printf("Введите диаметр \n");
+	scanf_s("%f", &d);
+	L = d * M_PI;
+	printf("L= %f\n", L);
+	return 0;
+}
