@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+#include <stdlib.h>
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    long a; long b;
+
+    printf("Введите переменные \n");
+    scanf_s("%ld", &a);
+    scanf_s("%ld", &b);
+
+    a = abs(a);
+    b = abs(b);
+
+    printf("Сумма модулей перeменных равна : %ld\n", a + b);
+    printf("Разность модулей переменных равна : %ld\n", a - b);
+    printf("Произведение модулей переменных равно : %ld\n", a * b);
+    printf("Частное модулей переменных равно : %lf\n",(double) a / b);
+
+    return 0;
+
+}
