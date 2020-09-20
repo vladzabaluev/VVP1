@@ -1,0 +1,19 @@
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    float a; float b;
+
+    printf("Введите переменные \n");
+    scanf_s("%f", &a);
+    scanf_s("%f",&b);
+
+    a = a * a;
+    b = b * b;
+    printf("Сумма квадратов перeменных равна : %lf\n",(double) a + b);
+    printf("Разность квадратов переменных равна : %lf\n", (double)a - b);
+    printf("Произведение квадратов переменных равно : %lf\n", (double)a * b);
+    printf("Частное квадратов переменных равно : %f\n", a / b);
+
+    return 0;
+
+}
