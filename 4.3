@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    float a; float b; float k;
+
+    printf("Введите числа \n");
+    scanf_s("%f", &a); scanf_s("%f", &b);
+     
+    k = (a + b) / 2;
+    printf("Среднее арифмитическое a и b равно : %f", k);
+    return 0;
+
+}
