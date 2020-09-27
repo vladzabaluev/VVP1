@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int x1, x2, x3, y1, y2, y3, x4, y4; double P, S, ac, bc, ab;
+  //  int x1 = 0; int y1 = 0; int x2 = 3; int y2 = 0; int x3 = 3; int y3 = 3; int x4, y4; double P, S, ac, bc, ab;
+
+    printf("Введите х1 и у1 \n");
+    scanf_s("%d", &x1);
+    scanf_s("%d", &y1);
+    printf("Введите х2 и у2 \n");
+    scanf_s("%d", &x2);
+    scanf_s("%d", &y2);
+    printf("Введите х3 и у3 \n");
+    scanf_s("%d", &x3);
+    scanf_s("%d", &y3); 
+    
+
+    x4 = abs(x2 - x1);
+    y4 = abs(y2 - y1);
+    ab = sqrt((double)x4 * x4 + (double)y4 * y4);
+    x4 = abs(x3 - x2);
+    y4 = abs(y3 - y2);
+    bc = sqrt((double)x4 * x4 + (double)y4 * y4);
+    x4 = abs(x1 - x3);
+    y4 = abs(y1 - y3);
+    ac = sqrt((double)x4 * x4 + (double)y4 * y4);
+
+    P = ab + bc + ac;
+    printf("Периметр треугольника равен %lf\n", P);
+    S = sqrt(P / 2 * (P / 2 - ac) * (P / 2 - ab) * (P / 2 - bc));
+    printf("Площадь треугольника равна %lf", S);
+    return 0;
+
+}
