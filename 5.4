@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    float x1, x2, y1, y2, ab, bc, P,S;
+ 
+
+    printf("Введите х1 и у1 \n");
+    scanf_s("%f", &x1);
+    scanf_s("%f", &y1);
+    printf("Введите х2 и у2 \n");
+    scanf_s("%f", &x2);
+    scanf_s("%f", &y2);
+
+    ab = y2 - y1;
+    bc = x2 - x1;
+    P = 2*(ab + bc);
+    S = ab * bc;
+
+    printf("Периметр прямоугольниа равен %f\n", P);
+    printf("Площадь прямоугольника равна %f", S);
+
+    return 0;
+
+}
