@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int a, b, c, ac, bc;
+
+    printf("Введите координаты А\n");
+    scanf_s("%d", &a);
+    printf("Введите координаты B\n");
+    scanf_s("%d", &b);
+    printf("Введите координаты C\n");
+    scanf_s("%d", &c);
+
+    if (a < 0)
+        a = abs(a);
+    if (b < 0)
+        b = abs(b);
+    if (c < 0)
+        c = abs(c);
+ 
+    ac = c - a;
+    bc = b - c;
+    printf("Произведение длинн отрезков равно %d", ac * bc);
+
+    return 0;
+}

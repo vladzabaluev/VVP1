@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int a, b, c, ac, bc;
+
+    printf ("Введите координаты А\n");
+    scanf_s("%d", &a);
+    printf ("Введите координаты B\n");
+    scanf_s("%d", &b);
+    printf("Введите координаты C\n");
+    scanf_s("%d", &c);
+
+   
+    ac = abs(b - a);
+    bc = abs(c - b);
+
+    printf("Длинна AC %d\n", ac);
+    printf("Длинна BC %d\n", bc);
+    printf("Сумма длинн равна %d\n", ac+bc);
+
+    return 0;
+}

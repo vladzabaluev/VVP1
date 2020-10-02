@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    float x1, x2,x3, y1, y2,y3; double s;
+
+    printf("Введите х1 и у1 \n");
+    scanf_s("%f", &x1);
+    scanf_s("%f", &y1);
+    printf("Введите х2 и у2 \n");
+    scanf_s("%f", &x2);
+    scanf_s("%f", &y2);
+
+    x3 = x2 - x1;
+    y3 = y2 - y1;
+    s = sqrt((double)x3 * x3 + (double)y3 * y3);
+
+    printf("Расстояние равно %lf", s);
+    return 0;
+
+
+}
