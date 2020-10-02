@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    float a, b;
+
+    printf("vvedite a \n");
+    scanf_s("%f", &a);
+
+    b = a * a;
+    b *= b;
+    b *= b;
+
+    printf("a^8= %f", b);
+    return 0;
+}
