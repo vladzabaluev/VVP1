@@ -1,28 +1,23 @@
-﻿// laba_vvp6_1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿// laba_vvp7_5.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
-#include <stdio.h>
-#include <math.h>
 #include <locale.h>
+#include <math.h>
+#include <stdio.h>
 
 int main()
 {
     setlocale(LC_ALL, "Rus");
-    float a,b,t;
+    float x, a, b;
 
-    printf("Введите а и b\n");
+    printf("Введите A<>0 \n");
     scanf_s("%f", &a);
+    printf("Введите B \n");
     scanf_s("%f", &b);
 
-    t = a;
-    a = b;
-    b = t;
-
-    printf("а= %f\n", a);
-    printf("b= %f\n", b);
-    
+    x = -b / a;
+    printf("x= %f \n", x);
     return 0;
-
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

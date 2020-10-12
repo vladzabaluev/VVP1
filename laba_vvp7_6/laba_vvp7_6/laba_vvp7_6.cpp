@@ -1,4 +1,4 @@
-﻿// laba_vvp6_1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿// laba_vvp7_6.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
 #include <stdio.h>
@@ -8,21 +8,37 @@
 int main()
 {
     setlocale(LC_ALL, "Rus");
-    float a,b,t;
+    float x, a1, b1, c1, a2, b2, c2, y, d, d1, d2;
 
-    printf("Введите а и b\n");
-    scanf_s("%f", &a);
-    scanf_s("%f", &b);
+    printf("Введите а1 \n");
+    scanf_s("%f", &a1);
+    printf("Введите а2 \n");
+    scanf_s("%f", &a2);
+    printf("Введите b1 \n");
+    scanf_s("%f", &b1);
+    printf("Введите b2 \n");
+    scanf_s("%f", &b2);
+    printf("Введите c1 \n");
+    scanf_s("%f", &c1);
+    printf("Введите c2 \n");
+    scanf_s("%f", &c2);
 
-    t = a;
-    a = b;
-    b = t;
+    d = (a1 * b2) - (a2 * b1);
+    d1 = (c1 * b2) - (b1 * c2);
+    d2 = (a1 * c2) - (c1 * a2);
+    if (d == 0) 
+    {
+        printf("Система не совместна \n");
+    }
+    else 
+    {
+        x = d1 / d;
+        y = d2 / d;
+        printf("x= %f\n", x);
+        printf("y= %f", y);
+    }
 
-    printf("а= %f\n", a);
-    printf("b= %f\n", b);
-    
     return 0;
-
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

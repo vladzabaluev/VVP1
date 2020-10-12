@@ -1,26 +1,23 @@
-﻿// laba_vvp6_1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿// laba_vvp7_1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
 #include <stdio.h>
 #include <math.h>
 #include <locale.h>
+#define M_PI   3.14159265358979323846	// вводим константу пи
 
 int main()
 {
-    setlocale(LC_ALL, "Rus");
-    float a,b,t;
+    setlocale(LC_ALL,"Rus");
+    int a; double b;
 
-    printf("Введите а и b\n");
-    scanf_s("%f", &a);
-    scanf_s("%f", &b);
 
-    t = a;
-    a = b;
-    b = t;
+    printf("Введите угол\n");
+    scanf_s("%d", &a);
 
-    printf("а= %f\n", a);
-    printf("b= %f\n", b);
-    
+    b = (double)a / 180 * M_PI;
+
+    printf("Угол а в радианаx равен %lf", b);
     return 0;
 
 }
