@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    float x, a, y;
+
+    printf("Введите кол-во кг купленных конфет \n");
+    scanf_s("%f", &x);
+    printf("Введите стоимость купленных конфет \n");
+    scanf_s("%f", &a);
+
+    a = a / x;
+    printf("Введите желаемое кол-во киллограмм конфет \n");
+    scanf_s("%f", &y);
+
+    y *= a;
+    printf("1 киллограмм конфет стоит %f\n", a);
+    printf("Y киллограмм конфет стоит %f\n", y);
+    return 0;
+}
