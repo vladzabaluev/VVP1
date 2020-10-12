@@ -1,0 +1,18 @@
+#include <locale.h>
+#include <math.h>
+#include <stdio.h>
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    float x, a, b;
+
+    printf("Введите A<>0 \n");
+    scanf_s("%f", &a);
+    printf("Введите B \n");
+    scanf_s("%f", &b);
+
+    x = -b / a;
+    printf("x= %f \n", x);
+    return 0;
+}
