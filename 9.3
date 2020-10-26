@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int a,N;
+
+    printf("Введите кол-во дней прошедших сначала года \n");
+    scanf_s("%d", &a);
+    printf("Введите каким днем недели являлось 1ое января\n");
+    scanf_s("%d", &N);
+
+    a += N-1;
+    while (a > 7)
+    {
+        a -= 7;
+    }
+    printf("Номер недели для К-го дня года %d", a);
+    return 0;
+}
