@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int a, b;
+
+    printf("Введите год \n");
+    scanf_s("%d", &a);
+
+    if (a % 100 == 0) 
+    {
+        printf("Это %d", a / 100);
+        printf(" век");
+    }
+    else
+    {
+        printf("Это %d", a / 100+1);
+        printf(" век");
+    }
+
+    return 0;
+}
