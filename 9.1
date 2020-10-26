@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int a;
+
+    printf("Введите кол-во секунд прошедшее сначала суток \n");
+    scanf_s("%d", &a);
+
+    while (a > 60)
+    {
+        a -= 60;
+    }
+    printf("Количество секунд сначала последней минуты %d", a);
+    return 0;
+}
