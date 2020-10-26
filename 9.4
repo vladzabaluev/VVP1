@@ -1,0 +1,81 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int a, b, c, t, d, k;
+
+    printf("Введите a \n");
+    scanf_s("%d", &a);
+    printf("Введите b \n");
+    scanf_s("%d", &b);
+    printf("Введите c \n");
+    scanf_s("%d", &c);
+
+    if (a == b)
+    {
+        if (a % c == 0) 
+        {
+            a *= b;
+            b = a;
+            c *= c;
+            a /= c;
+            b = b - a * c;
+        }
+        else 
+        {
+            t = a % c;
+            a *= b;
+            d = a;
+            a = (a - 2 * b * t + t * t) / (c * c);
+            b = d - a * c * c;
+        }
+    }
+    else if (b > a) 
+    {
+        if (a % c == 0) 
+        {
+            a *= b;
+            b = a;
+            c *= c;
+            a /= c;
+            b = b - a * c;
+        }
+        else 
+        {
+            t = a % c;
+            a *= b;
+            d = a;
+            a = (a - b * t) / (c * c);
+            b = d-a*c*c;
+        }
+    }
+    else if (a > b) 
+    {
+        if (b % c == 0)
+        {
+            a *= b;
+            b = a;
+            c *= c;
+            a /= c;
+            b = b - a * c;
+        }
+        else
+        {
+            k = a;
+            t = b % c;
+            a *= b;
+            d = a;
+            a = (a - k * t) / (c * c);
+            b = d - a * c * c;
+        }
+    }
+   
+
+   
+    printf("Кол-во квадратов %d\n", a);
+    printf("Площадь незанятой части %d", b);
+    return 0;
+}
