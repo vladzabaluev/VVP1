@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int a;
+
+    printf("Введите число \n");
+    scanf_s("%d", &a);
+
+    if (a % 2 == 0 && a < 100 && a>9)
+    {
+        printf("Данное число является четным двузначным");
+    }
+    else  printf("Данное число не является четным двузначным");
+
+    return 0;
+}
