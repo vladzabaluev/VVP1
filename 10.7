@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int a, b, c;
+
+    printf("Введите стороны a, b, c \n");
+    scanf_s("%d", &a);
+    scanf_s("%d", &b);
+    scanf_s("%d", &c);
+
+    if ((a + b > c) && (b + c > a) && (a + c > b)) 
+    {
+        printf("Существует треугольник со сторонами a, b, c");
+    }
+    else  printf("треугольник со сторонами a, b, c NE Существует ");
+
+    return 0;
+}
