@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int a, b;
+
+    printf("Введите число \n");
+    scanf_s("%d", &a);
+
+    b = (a % 10) * 10 + (a % 100) / 10;
+    a /= 100;
+
+    if (a == b) {
+        printf("Данное число читается одинаково слева направо и справа налево");
+    }
+    else  printf("Данное число NE читается одинаково слева направо и справа налево");
+
+    return 0;
+}
