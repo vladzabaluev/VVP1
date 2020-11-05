@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int a, b, c;
+
+    printf("Введите a,b,c \n");
+    scanf_s("%d", &a);
+    scanf_s("%d", &b);
+    scanf_s("%d", &c);
+
+    if (a >= b)
+    {
+        if (b >= c)
+        {
+            printf("Сумма  из 2х наибольших чисел равна %d", a + b);
+        }
+        else  printf("Сумма  из 2х наибольших чисел равна %d", a + c);
+    }
+    if (b >= a)
+    {
+        if (a >= c)
+        {
+            printf("Сумма  из 2х наибольших чисел равна %d", a + b);
+        }
+        else  printf("Сумма  из 2х наибольших чисел равна %d", b + c);
+    }
+    if (c >= a)
+    {
+        if (a >= b)
+        {
+            printf("Сумма  из 2х наибольших чисел равна %d", a + c);
+        }
+        else  printf("Сумма  из 2х наибольших чисел равна %d", b + c);
+    }
+    return 0;
+}
