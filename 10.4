@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int a, b, c;
+
+    printf("Введите число \n");
+    scanf_s("%d", &a);
+
+    c = a % 10;
+    a /= 10;
+    b = a % 10;
+    a /= 10;
+    if ((a > b && b > c) || (a < b && b < c))
+    {
+        printf("Цифры данного числа образуют возрастающую или убывающую последовательность");
+    }
+    else  printf("Цифры данного числа НЕ образуют возрастающую или убывающую последовательность");
+    return 0;
+}
