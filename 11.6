@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int a;
+
+    printf("Введите число \n");
+    scanf_s("%d", &a);
+
+
+        if (a % 2 == 0)
+        {
+            if (a < 10) printf("Цифра четная");
+            if (a > 10 && a < 100) printf("Число двузначное четное");
+            if (a > 100 && a < 1000) printf("Число трехзначное четное");
+        }
+        if (a % 2 != 0)
+        {
+            if (a < 10) printf("Цифра нечетная");
+            if (a > 10 && a < 100) printf("Число двузначное нечетное");
+            if (a > 100 && a < 1000) printf("Число трехзначное нечетное");
+        }
+    return 0;
+}
