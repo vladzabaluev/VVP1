@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int a;
+
+    printf("Введите координаты точки \n");
+    scanf_s("%d", &a);
+
+    if (a > 0)
+    {
+        if (a % 2 == 0)
+        {
+            printf("Число положительное четное");
+        }
+        if (a % 2 != 0)
+        {
+            printf("Число положительное нечетное");
+        }
+    }
+    if (a == 0) printf("Нулевое число");
+    if (a < 0)
+    {
+        if (a % 2 == 0)
+        {
+            printf("Число отрицательное четное");
+        }
+        if (a % 2 != 0)
+        {
+            printf("Число отрицательное нечетное");
+        }
+    }
+
+    return 0;
+}
