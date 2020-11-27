@@ -1,0 +1,134 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int a;
+
+    printf("Введите кол-во заданий \n");
+    scanf_s("%d", &a);
+
+    if (a < 21)
+    {
+        if (a == 10) printf("десять учебных заданий");
+        if (a > 10)
+        {
+            switch (a)
+            {
+            case 11:
+                printf("Одиннадцать ");
+                break;
+            case 12:
+                printf("Двенадцать ");
+                break;
+            case 13:
+                printf("Тринадцать ");
+                break;
+            case 14:
+                printf("Четырнадцать ");
+                break;
+            case 15:
+                printf("Пятнадцать ");
+                break;
+            case 16:
+                printf("Шестнадцать ");
+                break;
+            case 17:
+                printf("Семнадцать ");
+                break;
+            case 18:
+                printf("Восемнадцать ");
+                break;
+            case 19:
+                printf("Девятнадцать ");
+                break;
+            case 20:
+                printf("Двадцать ");
+                break;
+            }
+            printf("учебных заданий");
+        }
+    }
+    if (a > 20 && a < 30)
+    {
+
+        printf("Двадцать ");
+        switch (a)
+        {
+        case 21:
+            printf("одно учебное задание");
+            break;
+        case 22:
+            printf("два учебных задания");
+            break;
+        case 23:
+            printf("три учебных задания");
+            break;
+        case 24:
+            printf("четыре учебных задания");
+            break;
+        case 25:
+            printf("пять учебных заданий");
+            break;
+        case 26:
+            printf("шесть учебных заданий");
+            break;
+        case 27:
+            printf("семь учебных заданий");
+            break;
+        case 28:
+            printf("восемь учебных заданий");
+            break;
+        case 29:
+            printf("девять учебных заданий");
+            break;
+        }
+    }
+    if (a > 29) 
+    {
+        if (a == 40) printf("сорок учебных заданий");
+        if (a < 40)
+        {
+            printf("Тридцать ");
+            switch (a)
+            {
+            case 30:
+                printf("учебных заданий");
+                break;
+            case 31:
+                printf("одно учебное задание");
+                break;
+            case 32:
+                printf("два учебных задания");
+                break;
+            case 33:
+                printf("три учебных задания");
+                break;
+            case 34:
+                printf("четыре учебных задания");
+                break;
+            case 35:
+                printf("пять учебных заданий");
+                break;
+            case 36:
+                printf("шесть учебных заданий");
+                break;
+            case 37:
+                printf("семь учебных заданий");
+                break;
+            case 38:
+                printf("восемь учебных заданий");
+                break;
+            case 39:
+                printf("девять учебных заданий");
+                break;
+
+            }
+        }
+    }
+    return 0;
+
+}
