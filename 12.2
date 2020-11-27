@@ -1,0 +1,81 @@
+
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+#include <string.h>
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int N; char C;
+
+    printf("Введите направление \n");
+    scanf_s("%c", &C ,sizeof(C));
+    printf("Введите команду \n");
+    scanf_s("%d", &N);
+
+    if (C == '‘')
+    {
+        switch (N) 
+        {
+          case 0:
+              printf("Север");
+              break;
+          case 1:
+              printf("Запад");
+              break;
+          case -1:
+              printf("Восток");
+              break;
+
+        }
+    }
+    if (C == 'ћ')
+    {
+        switch (N)
+        {
+        case 0:
+            printf("Юг");
+            break;
+        case -1:
+            printf("Запад");
+            break;
+        case 1:
+            printf("Восток");
+            break;
+        }
+    }
+    if (C == '‡')
+    {
+        switch (N)
+        {
+        case 0:
+            printf("Запад");
+            break;
+        case 1:
+            printf("Юг");
+            break;
+        case -1:
+            printf("Север");
+            break;
+
+        }
+    }
+    if (C == '‚')
+    {
+        switch (N)
+        {
+        case 1:
+            printf("Север");
+            break;
+        case -1:
+            printf("Юг");
+            break;
+        case 0:
+            printf("Восток");
+            break;
+
+        }
+    }
+
+}
