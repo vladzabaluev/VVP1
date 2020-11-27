@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int i=0; double l=0, a, n;
+
+    printf("Введите A \n");
+    scanf_s("%lf", &a);
+    printf("Введите N \n");
+    scanf_s("%lf", &n);
+
+    while (i <= int (n))
+    {
+        l += pow(a, double(i));
+        i++;
+    }
+    printf("%lf", l);
+    return 0;
+}
