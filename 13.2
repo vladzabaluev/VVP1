@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int a, i = 0; double l = 1, j=1.1;
+
+    printf("Введите N \n");
+    scanf_s("%d", &a);
+
+
+    while (i < a)
+    {
+        l = l * j;
+        j += 0.1;
+        i++;
+    }
+    printf("%lf", l);
+    return 0;
+
+
+}
