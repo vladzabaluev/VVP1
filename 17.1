@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+#include <stdlib.h> 
+#include <ctime> 
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int n, i, j, l, k;
+    srand(time(NULL));
+
+    printf("Введите N \n");
+    scanf_s("%d", &n);
+    printf("Введите K (K<L) \n");
+    scanf_s("%d", &k);
+    printf("Введите L \n");
+    scanf_s("%d", &l);
+   
+
+
+    int* mass = new int[n];
+    for (i = 0; i < n; i++)
+    {
+        mass[i] = rand() % 10;
+        printf("%d ", mass[i]);
+    }
+    printf("\n");
+    int sum = 0;
+    for (i = k - 1; i < l - 1; i++) 
+    {
+        sum += mass[i];
+    }
+    printf("%f ", (float)sum/(l-k+1));
+
+    return 0;
+}
