@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+ 
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int n, i, a, b;
+
+
+    printf("Введите N \n");
+    scanf_s("%d", &n);
+    printf("Введите A \n");
+    scanf_s("%d", &a);
+    printf("Введите B \n");
+    scanf_s("%d", &b);
+
+    int* mass = new int[n];
+    mass[0] = a;
+    mass[1] = b;
+    mass[2] = a + b;
+    for (i = 3; i < n; i++)
+    {
+        mass[i] = 2 * mass[i - 1];
+    }
+    for (i = 0; i < n; i++)
+    {
+        printf("%d ", mass[i]);
+    }
+    
+
+    return 0;
+}
