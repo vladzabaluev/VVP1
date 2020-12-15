@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+float RingS(float R1, float R2)
+{
+    float Pi = 3.14;
+    float deltaS = Pi * (R1 - R2) * (R1 + R2);
+    return(deltaS);
+}
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    float a, b; int res;
+    for (int i = 0; i < 3; i++)
+    {
+        printf("Введите R1 (R1>R2)\n");
+        scanf_s("%f", &a);
+        printf("Введите R2 \n");
+        scanf_s("%f", &b);
+
+        printf("Площадь кольца равна: %f\n", RingS(a, b));
+    }
+    
+
+    return 0;
+}
