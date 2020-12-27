@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int n, i, j, t, a;
+
+    printf("Введите N \n");
+    scanf_s("%d", &n);
+
+    int* mass1 = new int[n];
+    for (i = 0; i < n; i++)
+    {
+        printf("Введите элементs массива1 \n");
+        scanf_s("%d", &a);
+        mass1[i] = a;
+    }
+    int* mass2 = new int[n];
+    for (i = 0; i < n; i++)
+    {
+        printf("Введите элементs массива2 \n");
+        scanf_s("%d", &a);
+        mass2[i] = a;
+    }
+    for (i = 0; i < n ; i++) 
+    {
+        t = mass2[i];
+        mass2[i] = mass1[i];
+        mass1[i] = t;
+    }
+    printf("Элементы массива А: \n");
+    for (i = 0; i < n; i++) 
+    {
+        printf("%d", mass1[i]);
+    }
+    printf("\n");
+    printf("Элементы массива B: \n");
+    for (i = 0; i < n; i++)
+    {
+        printf("%d", mass2[i]);
+    }
+    return 0;
+}
