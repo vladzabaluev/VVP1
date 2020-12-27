@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int n, i, j, t, a;
+
+    printf("Введите N \n");
+    scanf_s("%d", &n);
+
+    int* mass1 = new int[n];
+    for (i = 0; i < n; i++)
+    {
+        printf("Введите элемент массива \n");
+        scanf_s("%d", &a);
+        mass1[i] = a;
+    }
+    float* mass2 = new float[n];
+    for (i = 0; i < n; i++) 
+    {
+        mass2[i] = 0;
+        for (j = 0; j <= i; j++) 
+        {          
+            mass2[i] += mass1[j];
+            t = j;
+        }
+        mass2[i] = mass2[i] / (t + 1);
+        printf("%f ", mass2[i]);
+    }
+}
