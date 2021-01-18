@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>     
+#include <windows.h> 
+
+using namespace std;
+
+int main()
+{
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+
+    cout << "Введите строку" << endl;
+    string str;
+    getline(cin, str);
+    char C;
+    cout << "Введите символ" << endl;
+    cin >> C;
+    int a = 0;
+    for (int i = 0; i < str.length(); i++)
+    {
+        cout << str[i];
+        if ( C == str[i] )
+        {
+            cout << str[i];
+        }
+    }
+}
